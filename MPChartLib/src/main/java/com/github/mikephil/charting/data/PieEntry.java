@@ -10,7 +10,7 @@ import android.util.Log;
 @SuppressLint("ParcelCreator")
 public class PieEntry extends Entry {
 
-    private String label;
+    private String label,txt;
 
     public PieEntry(float value) {
         super(0f, value);
@@ -48,6 +48,12 @@ public class PieEntry extends Entry {
         this.label = label;
     }
 
+    public PieEntry(float value, String label, String txt) {
+        super(0f, value);
+        this.label = label;
+        this.txt = txt;
+    }
+
     /**
      * This is the same as getY(). Returns the value of the PieEntry.
      *
@@ -63,6 +69,14 @@ public class PieEntry extends Entry {
 
     public void setLabel(String label) {
         this.label = label;
+    }
+
+      public String getTxt() {
+        return txt;
+    }
+
+    public void setTxt(String txt) {
+        this.txt = txt;
     }
 
     @Deprecated
